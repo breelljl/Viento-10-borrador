@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nombre del Hotel — Prototipo</title>
+  <meta name="description" content="Prototipo de sitio web para hotel. Sustituye textos e imágenes por tus assets." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <!-- JSON-LD schema.org/Hotel (rellena los valores) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "NOMBRE_DEL_HOTEL",
+    "description": "DESCRIPCION_BREVE_DEL_HOTEL",
+    "url": "https://tudominio.example",
+    "telephone": "+34-000-000-000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle y número",
+      "addressLocality": "Ciudad",
+      "postalCode": "00000",
+      "addressCountry": "ES"
+    },
+    "image": [
+      "images/hero.jpg",
+      "images/room1.jpg",
+      "images/exterior.jpg"
+    ],
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Hotel prototipo</a>
+      <button id="navToggle" class="nav-toggle" aria-label="Abrir menú">☰</button>
+      <nav id="mainNav" class="main-nav">
+        <a href="#rooms">Habitaciones</a>
+        <a href="#gallery">Galería</a>
+        <a href="#contact">Contacto</a>
+        <a class="cta" href="#book">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner container">
+        <div class="hero-text">
+          <h1>Bienvenido a NOMBRE_DEL_HOTEL</h1>
+          <p class="subtitle">Confort y ubicación ideal para tu estancia. Desayuno incluido y cancelación flexible.</p>
+          <a class="primary-cta" href="#book">Reservar ahora</a>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1501117716987-c8e9a84f0f8b?w=1200&auto=format&fit=crop&q=80" alt="Vista del hotel" />
+        </div>
+      </div>
+    </section>
+
+    <section id="rooms" class="section container">
+      <h2>Habitaciones</h2>
+      <p class="lead">Elige la habitación que mejor se adapta a tu viaje.</p>
+      <div class="rooms-grid">
+        <article class="room-card">
+          <img src="https://images.unsplash.com/photo-1505692794403-3f7a464c2c16?w=800&auto=format&fit=crop&q=70" alt="Habitación Estándar" />
+          <div class="room-body">
+            <h3>Habitación Estándar</h3>
+            <p>Habitación acogedora con cama doble, baño privado y Wi‑Fi gratis.</p>
+            <ul class="services">
+              <li>Desayuno incluido</li>
+              <li>Wi‑Fi</li>
+              <li>Aire acondicionado</li>
+            </ul>
+            <div class="room-actions">
+              <a class="secondary-cta" href="#book">Ver disponibilidad</a>
+              <a class="text-link" href="#">Ver ficha</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-card">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&auto=format&fit=crop&q=70" alt="Habitación Superior" />
+          <div class="room-body">
+            <h3>Habitación Superior</h3>
+            <p>Más espacio, mejores vistas y amenities premium.</p>
+            <ul class="services">
+              <li>Minibar</li>
+              <li>TV Smart</li>
+              <li>Secador profesional</li>
+            </ul>
+            <div class="room-actions">
+              <a class="secondary-cta" href="#book">Ver disponibilidad</a>
+              <a class="text-link" href="#">Ver ficha</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-card">
+          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&auto=format&fit=crop&q=70" alt="Suite" />
+          <div class="room-body">
+            <h3>Suite</h3>
+            <p>Espacio exclusivo, sala privada y detalles de lujo.</p>
+            <ul class="services">
+              <li>Desayuno a la carta</li>
+              <li>Servicio a la habitación</li>
+              <li>Vista panorámica</li>
+            </ul>
+            <div class="room-actions">
+              <a class="secondary-cta" href="#book">Ver disponibilidad</a>
+              <a class="text-link" href="#">Ver ficha</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery container">
+      <h2>Galería</h2>
+      <div class="gallery-grid">
+        <button class="thumb" data-src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1400&auto=format&fit=crop&q=80"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=400&auto=format&fit=crop&q=60" alt="Galería 1"></button>
+        <button class="thumb" data-src="https://images.unsplash.com/photo-1505691938898-9ddf6e5b99a5?w=1400&auto=format&fit=crop&q=80"><img src="https://images.unsplash.com/photo-1505691938898-9ddf6e5b99a5?w=400&auto=format&fit=crop&q=60" alt="Galería 2"></button>
+        <button class="thumb" data-src="https://images.unsplash.com/photo-1505691938884-7f5b5d5b6e56?w=1400&auto=format&fit=crop&q=80"><img src="https://images.unsplash.com/photo-1505691938884-7f5b5d5b6e56?w=400&auto=format&fit=crop&q=60" alt="Galería 3"></button>
+        <button class="thumb" data-src="https://images.unsplash.com/photo-1505691938881-58a3d1b2b3c7?w=1400&auto=format&fit=crop&q=80"><img src="https://images.unsplash.com/photo-1505691938881-58a3d1b2b3c7?w=400&auto=format&fit=crop&q=60" alt="Galería 4"></button>
+      </div>
+    </section>
+
+    <section class="section container testimonials">
+      <h2>Testimonios</h2>
+      <blockquote>
+        <p>"Estancia perfecta, el desayuno y la atención fueron excelentes."</p>
+        <cite>— Ana M.</cite>
+      </blockquote>
+    </section>
+
+    <section id="contact" class="section contact container">
+      <h2>Contacto & Ubicación</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Datos</h3>
+          <p>Dirección: Calle Ejemplo 1, Ciudad</p>
+          <p>Teléfono: <a href="tel:+34000000000">+34 000 000 000</a></p>
+          <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+          <a class="secondary-cta" href="#book">Reservar</a>
+        </div>
+        <div class="contact-card">
+          <h3>Formulario</h3>
+          <form id="contactForm" action="#" onsubmit="return false;">
+            <label>
+              Nombre
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Mensaje
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button class="primary-cta" type="submit">Enviar consulta</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Nombre del Hotel. Todos los derechos reservados.</p>
+      <nav class="footer-nav">
+        <a href="#">Aviso legal</a>
+        <a href="#">Política de privacidad</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lightboxClose" class="lightbox-close" aria-label="Cerrar">×</button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
